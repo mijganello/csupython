@@ -1,3 +1,4 @@
+#Найти самое длинное слово из списка
 words = ['lor', 'lorem', 'loremipsum', 'loremipsumdolor']
 curlen = 0
 maxlen = 0

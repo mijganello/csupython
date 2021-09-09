@@ -1,3 +1,4 @@
+#Список слов, короче 5 букв
 words = ['lor','lorem','loremipsum','loremipsumdolor','aaaaaaa','oooooo']
 less = []
 

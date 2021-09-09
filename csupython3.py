@@ -1,3 +1,4 @@
+#Разделить на 2 списка: список слов,начинающихся на гласную и на согласную
 words = ['lor','lorem','loremipsum','loremipsumdolor','aaaaaaa','oooooo']
 vowel = ['a','e','i','o','u','y']
 vowel_w = []
