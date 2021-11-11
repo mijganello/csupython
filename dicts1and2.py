@@ -1,33 +1,23 @@
 dict1 = { 'trunk': 'хобот', 'wasted': 'потрачено' }
 dict2 = { 'nail': 'гвоздь', 'trunk': 'ствол' }
+dict3 = {}
 
+def dict_creator(d1, d2, d3):
 
-
-def getlist(a,b):
-    a_keys = list(dict.keys(a))
-    a_vals = list(dict.values(a))
-
-    b_keys = list(dict.keys(b))
-    b_vals = list(dict.values(b))
-
-    dict_creator(a_keys, a_vals, b_keys, b_vals)
-
-
-def dict_creator(ak,av,bk,bv):
-    tmp_keys = []
-    tmp_vals = []
-    
-    for x in ak:
-        if x in bk:
-            tmp_keys.append(x), tmp_vals.append(bv[bk.index(x)])
+    for key,value in d1.items():
+        if key in d2:
+            for key1,value1 in d2.items():
+                d3[key] = value1
         else:
-            tmp_keys.append(x), tmp_vals.append(av[ak.index(x)])
-    
-    for x in bk:
-        if x not in ak:
-            tmp_keys.append(x), tmp_vals.append(bv[bk.index(x)])
-    
-    final_dict = dict(zip(tmp_keys, tmp_vals))
-    print(final_dict, type(final_dict))
+            d3[key] = value
 
-getlist(dict1, dict2)
+    for key,value in d2.items():
+        if key not in d1:
+            d3[key] = value
+        
+
+    return(d3)
+
+
+result = dict_creator(dict1, dict2, dict3)
+print(result)
