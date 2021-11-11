@@ -1,8 +1,9 @@
 file = open('text.txt')
-text = file.read()
+text1 = file.read()
+file = open('text.txt')
+text = file.readlines()
 
-
-def counter(txt):
+def counter(txt,txt1):
     line_count = 0
     word_count = 0
     punct_counter = 0
@@ -11,9 +12,9 @@ def counter(txt):
     for x in txt:
         line_count+=1
     
-    word_count = len(txt.split())
+    word_count = len(txt1.split())
 
-    for x in txt:
+    for x in txt1:
         if x in puncts:
             punct_counter+=1
 
@@ -21,9 +22,6 @@ def counter(txt):
     return(line_count, word_count, punct_counter)
     
 
-
-
-
-
-result = counter(text)
+result = counter(text,text1)
 print(result)
+
